@@ -15,13 +15,13 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
-      throw new Error('...');
+      throw new Error('Given sides do not form a valid triangle.');
     }
 
     const longest = Math.max(this.a, this.b, this.c);
 
     if (longest >= this.a + this.b + this.c - longest) {
-      throw new Error('...');
+      throw new Error('Given sides do not form a valid triangle.');
     }
   }
 
@@ -43,7 +43,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (this.radius <= 0) {
-      throw new Error('...');
+      throw new Error('Radius must be greater than 0.');
     }
   }
 
@@ -63,7 +63,7 @@ export class Rectangle implements Figure {
     public width: number,
   ) {
     if (this.height <= 0 || this.width <= 0) {
-      throw new Error('...');
+      throw new Error('Side lengths must be greater than 0');
     }
   }
 
